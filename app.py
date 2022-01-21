@@ -22,7 +22,7 @@ st.sidebar.markdown("To get started <ol><li>Enter the <i>hashtag</i> you wish to
 
 
 # Input
-hashtag = st.text_input(label = "Search for a hashtag here to analyze:", value = "")
+hashtag = st.text_input(label = "Search for a hashtag here to analyze (E.g. leechongwei):", value = "")
 
 # Button
 if st.button(label = 'Get Data'):
