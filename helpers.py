@@ -2,17 +2,17 @@
 def process_results(data):
     nested_values = ['video', 'author', 'music', 'stats', 'authorStats', 'challenges', 'duetInfo', 'textExtra']
     skip_values = ['challenges', 'duetInfo', 'textExtra', 'stickersOnItem']
-    
+
     # Create a blank dictionary
     flattened_data = {}
 
     # Loop through each video
     for idx, value in enumerate(data):
         flattened_data[idx] = {}
-        
+
         # Loop through each property in each video
         for prop_idx, prop_value in value.items():
-            
+
             # Check if nested
             if prop_idx in nested_values:
                 if prop_idx in skip_values:

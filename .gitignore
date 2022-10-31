@@ -1,3 +1,5 @@
 /.ipynb_checkpoints
-/tiktokanalytics
-/__pycache__
+helpers.py
+TikTok Analytics Test.ipynb
+test.py
+venv
