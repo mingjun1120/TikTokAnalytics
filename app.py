@@ -1,6 +1,7 @@
 # Import base streamlit dependency
 import streamlit as st
 from streamlit.web import cli as stcli
+from streamlit import runtime
 
 # Import pandas to load the analytics data
 import pandas as pd
@@ -49,6 +50,7 @@ def main():
         df.sort_values(by='vid_created_time', inplace=True)
 
         # Process the data
+        # https://betterprogramming.pub/visualize-charts-using-groupby-and-aggregate-python-functions-56454820a25c
         df2 = df.loc[:, ['vid_created_time', 'vid_likes', 'vid_plays', 'vid_shares']]
         df2['vid_created_time'] = pd.to_datetime(df2["vid_created_time"])
         df2['vid_created_time_year'] = df2['vid_created_time'].apply(lambda x: x.year)
