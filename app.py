@@ -1,12 +1,11 @@
 # Import base streamlit dependency
 import streamlit as st
 from streamlit.web import cli as stcli
-from streamlit import runtime
 
 # Import pandas to load the analytics data
 import pandas as pd
 
-# Import subprocess and os to run the tiktok script from command line
+# Import subprocess or os to run the tiktok script from command line
 from subprocess import call
 import os
 
@@ -95,7 +94,7 @@ def main():
 
 
 if __name__ == '__main__':
-    if st._is_running_with_streamlit:
+    if st.runtime.exists():
         main()
     else:
         sys.argv = ["streamlit", "run", sys.argv[0]]
