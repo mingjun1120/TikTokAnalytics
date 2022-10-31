@@ -10,6 +10,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\authors.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\tiktokdata.csv">
           <value>
             <Attribute>
