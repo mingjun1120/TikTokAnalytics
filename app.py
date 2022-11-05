@@ -42,7 +42,7 @@ def main():
     if st.button(label='Get Data'):
         # Run get data function here
         os.system(command=f'python tiktok.py {hashtag}')  # call(['python', 'tiktok.py', hashtag])
-        time.sleep(7)
+        time.sleep(3)
 
         # Load in existing data to test it out
         df = pd.read_csv('TikTokVideo.csv')
@@ -58,7 +58,7 @@ def main():
         df2_grouped_year = df2_grouped_year.reset_index()
 
         # Split columns
-        st.markdown('### Metrics')
+        st.markdown('### Summary Metrics')
         left_col, mid_col, right_col = st.columns(3)
 
         # First Chart - Total Plays
